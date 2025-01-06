@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Rock Paper Scissors</h1>
+        <div id="mode-selection">
+            <button id="time-attack" class="mode-btn">Time Attack Mode</button>
+            <button id="survival" class="mode-btn">Survival Mode</button>
+        </div>
+        <div class="choices" style="display: none;">
+            <button id="rock" class="choice">Rock</button>
+            <button id="paper" class="choice">Paper</button>
+            <button id="scissors" class="choice">Scissors</button>
+        </div>
+        <div id="result" class="result"></div>
+        <div id="score" class="score">
+            <p>Player: <span id="player-score">0</span></p>
+            <p>Computer: <span id="computer-score">0</span></p>
+            <p id="time-left" style="display: none;">Time Left: <span id="time-seconds">60</span> sec</p>
+            <p id="rounds-left" style="display: none;">Rounds Left: <span id="rounds">10</span></p>
+        </div>
+        <button id="back-button" class="back-btn" style="display: none;">Back to Main Menu</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
