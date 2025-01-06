@@ -18,7 +18,7 @@ This repository is a curated collection of mini-games built with JavaScript. Eac
    ```bash  
    git clone https://github.com/AbhishekNaik1112/JS-Revision.git
    ```  
-2. Navigate to the game's folder:  
+2. Navigate to the game's folder
    
 3. Open the `index.html` file in your browser.  
 
