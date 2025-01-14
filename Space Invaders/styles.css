@@ -1,0 +1,76 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(15, 30px);
+    grid-template-rows: repeat(15, 30px);
+    gap: 1px;
+    width: 450px;
+    height: 450px;
+    position: relative;
+}
+
+.shooter {
+    background-color: lime;
+    box-shadow: 0 0 10px lime;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.laser {
+    background-color: red;
+    box-shadow: 0 0 10px red;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.invader {
+    background-color: purple;
+    box-shadow: 0 0 15px purple;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.boom {
+    background-color: yellow;
+    animation: boom 0.3s forwards;
+    box-shadow: 0 0 15px yellow;
+}
+
+@keyframes boom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime; }
+    100% { box-shadow: 0 0 20px lime, 0 0 30px lime, 0 0 40px lime, 0 0 50px lime; }
+}
+
+.shooter {
+    animation: glow 1s infinite alternate;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
