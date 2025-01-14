@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #333;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(7, 80px);
+  grid-template-rows: repeat(6, 80px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+  background-color: #00509e;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.cell.taken.player-one {
+  background-color: red;
+}
+
+.cell.taken.player-two {
+  background-color: yellow;
+}
+
+.falling {
+  animation: fall 0.5s ease-in-out forwards;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+#game-status {
+  font-size: 18px;
+  margin: 10px;
+}
+
+#reset-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#reset-btn:hover {
+  background-color: #0056b3;
+}
+
+.winning-line {
+  border: 3px solid #ffcc00;
+  box-shadow: 0 0 10px 5px rgba(255, 204, 0, 0.8);
+}
